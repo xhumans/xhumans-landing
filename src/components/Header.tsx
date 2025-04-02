@@ -6,38 +6,38 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-purple-50/0 backdrop-blur-x1 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+            <Link href="/" className="text-2xl font-bold text-text-primary">
               XHumans
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="#features" className="text-gray-600 hover:text-primary-500 transition-colors">
-              Features
-            </Link>
-            <Link href="#demo" className="text-gray-600 hover:text-primary-500 transition-colors">
+            <Link href="#demo" className="text-text-tertiary hover:text-primary-500 transition-colors">
               Demo
             </Link>
-            <Link href="#about" className="text-gray-600 hover:text-primary-500 transition-colors">
+            <Link href="#about" className="text-text-tertiary hover:text-primary-500 transition-colors">
               About
             </Link>
-            <Link href="#contact" className="text-gray-600 hover:text-primary-500 transition-colors">
+            <Link href="#contact" className="text-text-tertiary hover:text-primary-500 transition-colors">
               Contact
+            </Link>
+            <Link href="#en-es" className="text-text-tertiary hover:text-primary-500 transition-colors">
+              EN ES
             </Link>
           </nav>
 
-          {/* Login/Register Button */}
+          {/* Login/Register Button
           <div className="hidden md:block">
             <button className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-colors">
               Try Demo
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -56,9 +56,6 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="#features" className="text-gray-600 hover:text-primary-500 transition-colors">
-                Features
-              </Link>
               <Link href="#demo" className="text-gray-600 hover:text-primary-500 transition-colors">
                 Demo
               </Link>
@@ -68,9 +65,12 @@ export default function Header() {
               <Link href="#contact" className="text-gray-600 hover:text-primary-500 transition-colors">
                 Contact
               </Link>
-              <button className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-colors w-full">
+              <Link href="#en-es" className="text-gray-600 hover:text-primary-500 transition-colors">
+                EN ES
+              </Link>
+              {/* <button className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-colors w-full">
                 Try Demo
-              </button>
+              </button> */}
             </nav>
           </div>
         )}
