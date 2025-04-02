@@ -5,17 +5,17 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-linear-to-b from-primary-50 to-white">
+      <section className="relative py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 text-gray-900">
-              XHumans: The Future of Human-AI Interaction
+            <h1 className="text-5xl font-bold mb-6 text-text-primary">
+              XTRAORDINARY HUMANS
             </h1>
-            <p className="text-xl mb-8 text-gray-700">
-              Create emotionally engaging digital humans with seamless multimodal experiences across entertainment, education, and more.
+            <p className="text-xl mb-8 text-text-primary">
+              Chat with the World's Greatest Minds, Anytime
             </p>
-            <button className="bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-              Try Demo
+            <button className="bg-primary-500 hover:bg-primary-700 text-text-primary font-bold py-3 px-8 rounded-lg transition-colors">
+              Get Early Access
             </button>
           </div>
         </div>
@@ -24,7 +24,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Key Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-text-primary">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -63,10 +63,10 @@ export default function Home() {
       </section>
 
       {/* Demo Section */}
-      <section id="demo" className="py-16 bg-gray-50">
+      <section id="demo" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Experience XHumans</h2>
-          <p className="text-center text-gray-700 max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl font-bold text-center mb-8 text-text-primary">Experience XHumans</h2>
+          <p className="text-center text-text-secondary max-w-3xl mx-auto mb-10">
             Try our interactive demo to see how XHumans creates natural, engaging conversations with digital humans.
           </p>
           <DemoEmbed />
@@ -74,10 +74,10 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Ready to experience the future?</h2>
-          <p className="text-xl mb-8 text-gray-700 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-text-primary">Ready to experience the future?</h2>
+          <p className="text-xl mb-8 text-text-secondary max-w-2xl mx-auto">
             Join our early access program and be among the first to interact with our digital humans.
           </p>
           <button className="bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-gray-900 text-white">
+      <footer className="py-8 text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 text-center text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} XHumans. All rights reserved.
+            &copy; {new Date().getFullYear()} Eugenia Inc. All rights reserved.
           </div>
         </div>
       </footer>
