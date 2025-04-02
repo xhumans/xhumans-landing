@@ -29,6 +29,19 @@
   --color-secondary-800: oklch(0.35 0.1749 262.85);
   --color-secondary-900: oklch(0.28 0.1295 262.15);
   --color-secondary-950: oklch(0.22 0.0982 261.47);
+
+  /* Text Colors */
+  --color-text-primary: oklch(0.99 0 0);
+  --color-text-secondary: oklch(0.92 0 0);
+  --color-text-tertiary: oklch(0.86 0 0);
+
+  /* Background Colors */
+  --color-background-black: oklch(0.09 0.0101 284.11);
+  --color-background-primary: oklch(0.15 0.0067 270.98);
+  --color-background-secondary: oklch(0.18 0.0124 277.64);
+  --color-background-tertiary: oklch(0.22 0.0157 279.43);
+  --color-background-quaternary: oklch(0.25 0.0132 278.99);
+  --color-background-fivefold: oklch(0.29 0.0109 278.19);
 }
 
 @media (prefers-color-scheme: dark) {
