@@ -2,7 +2,7 @@
 
 @theme {
   /* Font families */
-  --font-display: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
 
   /* Brand Primary Colors */
@@ -31,6 +31,19 @@
   --color-secondary-900: oklch(0.28 0.1295 262.15);
   --color-secondary-950: oklch(0.22 0.0982 261.47);
 
+  /* Complementary Tertiary Colors */
+  --color-tertiary-50: oklch(0.94 0.0521 325);
+  --color-tertiary-100: oklch(0.89 0.1041 325.88);
+  --color-tertiary-200: oklch(0.79 0.205454 326.6937);
+  --color-tertiary-300: oklch(0.73 0.2791 327.26);
+  --color-tertiary-400: oklch(0.7 0.3182 327.47);
+  --color-tertiary-500: oklch(0.6 0.2765 327.59);
+  --color-tertiary-600: oklch(0.51 0.2348 327.41);
+  --color-tertiary-700: oklch(0.42 0.1923 327.14);
+  --color-tertiary-800: oklch(0.3 0.1406 327.16);
+  --color-tertiary-900: oklch(0.2 0.0901 327.31);
+  --color-tertiary-950: oklch(0.13 0.0617 328.36);
+
   /* Text Colors */
   --color-text-primary: oklch(0.99 0 0);
   --color-text-secondary: oklch(0.92 0 0);
@@ -43,10 +56,164 @@
   --color-bg-tertiary: oklch(0.22 0.0157 279.43);
   --color-bg-quaternary: oklch(0.25 0.0132 278.99);
   --color-bg-fivefold: oklch(0.29 0.0109 278.19);
+}
 
-  /* For light mode, define these as alternatives to your dark theme colors */
-  --color-bg-light-primary: oklch(0.98 0.0067 270.98);
-  --color-bg-light-secondary: oklch(0.95 0.0124 277.64);
-  --color-text-light-primary: oklch(0.15 0 0);
-  --color-text-light-secondary: oklch(0.35 0 0);
+html, body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  font-family: var(--font-body);
+}
+
+/* Typography System */
+@layer components {
+  /* Display Text */
+  .display-xl {
+    font-family: var(--font-display);
+    font-size: 72px;
+    font-weight: 700; /* Bold */
+    line-height: 1.1; /* 110% */
+  }
+
+  .display-l {
+    font-family: var(--font-display);
+    font-size: 60px;
+    font-weight: 700; /* Bold */
+    line-height: 1.1; /* 110% */
+  }
+
+  .display-m {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 700; /* Bold */
+    line-height: 1.1; /* 110% */
+  }
+
+  .display-s {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 700; /* Bold */
+    line-height: 1.1; /* 110% */
+  }
+
+  /* Headings */
+  .h1 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 600; /* SemiBold */
+    line-height: 1.2; /* 120% */
+  }
+
+  .h2 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600; /* SemiBold */
+    line-height: 1.2; /* 120% */
+  }
+
+  .h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 600; /* SemiBold */
+    line-height: 1.2; /* 120% */
+  }
+
+  .h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600; /* SemiBold */
+    line-height: 1.2; /* 120% */
+  }
+
+  .h5 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600; /* SemiBold */
+    line-height: 1.2; /* 120% */
+  }
+
+  .h6 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600; /* SemiBold */
+    line-height: 1.2; /* 120% */
+  }
+
+  /* Body Text */
+  .body-l {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400; /* Regular */
+    line-height: 1.4; /* 140% */
+  }
+
+  .body-m {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400; /* Regular */
+    line-height: 1.4; /* 140% */
+  }
+
+  .body-s {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400; /* Regular */
+    line-height: 1.4; /* 140% */
+  }
+
+  /* Labels & Captions */
+  .caption-l {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400; /* Regular */
+    line-height: 1.3; /* 130% */
+  }
+
+  .caption-m {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400; /* Regular */
+    line-height: 1.3; /* 130% */
+  }
+
+  .caption-s {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 400; /* Regular */
+    line-height: 1.3; /* 130% */
+  }
+
+  .label-l {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500; /* Medium */
+    line-height: 1.3; /* 130% */
+  }
+
+  .label-m {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500; /* Medium */
+    line-height: 1.3; /* 130% */
+  }
+
+  .label-s {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500; /* Medium */
+    line-height: 1.3; /* 130% */
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-6 rounded-md transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-50 font-semibold py-[10px] px-6 rounded-md transition-colors;
+  }
 }
