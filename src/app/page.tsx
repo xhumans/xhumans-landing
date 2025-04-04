@@ -4,6 +4,7 @@ import Footer from '@/components/common/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import FeaturedAvatarsSection from '@/components/sections/FeaturedAvatarsSection'
 import DemoSection from '@/components/sections/DemoSection'
+import ValuePropositionSection from '@/components/sections/ValuePropositionSection'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <DemoSection />
       <FeaturedAvatarsSection />
+      <ValuePropositionSection />
       {/* Other sections will be added later */}
       <Footer />
     </main>
