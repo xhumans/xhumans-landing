@@ -30,12 +30,21 @@ export default function FeaturedAvatarsSection() {
     // You can add more avatars as needed
   ]
 
+  // Define background element
+  const avatarsBackground = (
+    <>
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-linear-45/[in_oklch] from-primary-900 via-bg-primary to-bg-black"></div>
+      <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-primary-500/30 blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 rounded-full bg-tertiary-500/20 blur-3xl"></div>
+    </>
+  )
+  
   return (
-    <Section className="py-24 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-primary-500/10 blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 rounded-full bg-tertiary-500/10 blur-3xl -z-10"></div>
-      
+    <Section 
+      className="py-24 overflow-hidden"
+      background={avatarsBackground}
+    >
       {/* Section heading */}
       <div className="text-center mb-16">
         <h2 className="display-m mb-4">Coming to You Soon</h2>

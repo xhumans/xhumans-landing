@@ -1,18 +1,27 @@
 // src/components/sections/HeroSection.tsx
 import React from 'react'
 import Button from '../common/Button'
+import Section from '../common/Section'
 
 export default function HeroSection() {
-  return (
-    <section className="min-h-screen pt-20 pb-16 relative overflow-hidden">
+  // Define background element
+  const heroBackground = (
+    <>
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-linear-45/[in_oklch] from-primary-900 via-bg-primary to-bg-black z-0"></div>
+      <div className="absolute inset-0 bg-linear-45/[in_oklch] from-primary-900 via-bg-primary to-bg-black"></div>
       
       {/* Glowing effects */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-primary-500/20 blur-3xl z-1"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-secondary-500/20 blur-3xl z-1"></div>
-      
-      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-[90vh] text-center">
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-primary-500/20 blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-secondary-500/20 blur-3xl"></div>
+    </>
+  )
+  
+  return (
+    <Section 
+      className="min-h-screen pt-20 pb-16 overflow-hidden" 
+      background={heroBackground}
+    >
+      <div className="flex flex-col items-center justify-center min-h-[90vh] text-center">
         {/* 3D Avatar Cards will be added later */}
         
         {/* Main Content */}
@@ -30,6 +39,6 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
