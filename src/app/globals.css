@@ -235,3 +235,55 @@ html, body {
     @apply h-9 px-3 text-sm; /* 36px height, appropriate padding */
   }
 }
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-6deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-6deg);
+  }
+}
+
+@keyframes floatDelayed {
+  0% {
+    transform: translateY(0px) rotate(12deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(12deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(12deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDelayed 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Used for elements that should animate on scroll */
+.scroll-animate {
+  will-change: opacity, transform;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
