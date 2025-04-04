@@ -8,13 +8,13 @@ export default function Home() {
       <section className="relative py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 text-text-primary">
+            <h1 className="display-xl mb-6 text-text-primary">
               XTRAORDINARY HUMANS
             </h1>
             <p className="text-xl mb-8 text-text-primary">
               Chat with the World's Greatest Minds, Anytime
             </p>
-            <button className="bg-primary-500 hover:bg-primary-700 text-text-primary font-bold py-3 px-8 rounded-lg transition-colors">
+            <button className="btn btn-primary btn-lg">
               Get Early Access
             </button>
           </div>

@@ -1,9 +1,22 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import Header from '@/components/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+// Load Inter font
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
+
+// Load Space Grotesk font
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'XHumans - The Future of Human-AI Interaction',
@@ -17,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='dark'>
-      <body className={`${inter.className} bg-gradient-to-br from-primary-950 to-bg-primary to-34% `}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-gradient-to-br from-primary-950 to-bg-primary to-34% `}>
         <Header />
         {children}
       </body>
