@@ -18,7 +18,7 @@ export default function Section({
     <section id={id} className={`relative py-16 md:py-24 ${className}`}>
       {/* Background element that spans full width */}
       {background && (
-        <div className="absolute inset-0 w-full -z-10">
+        <div className="absolute inset-0 w-full z-0">
           {background}
         </div>
       )}
