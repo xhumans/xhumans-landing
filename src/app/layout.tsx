@@ -1,27 +1,25 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Space_Grotesk } from 'next/font/google';
-import Header from '@/components/Header';
+// src/app/layout.tsx
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter, Space_Grotesk } from 'next/font/google'
 
-// Load Inter font
+// Load fonts
 const inter = Inter({ 
   subsets: ['latin'],
-  variable: '--font-body',
   display: 'swap',
-});
+  variable: '--font-inter',
+})
 
-// Load Space Grotesk font
-const spaceGrotesk = Space_Grotesk({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-display',
   display: 'swap',
-});
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
-  title: 'XHumans - The Future of Human-AI Interaction',
-  description: 'Create emotionally engaging digital humans with seamless multimodal experiences.',
-};
+  title: 'XHumans - Extraordinary Humans',
+  description: 'Engage in powerful digital conversations with high-fidelity representations of your favorite celebrities, all in an interactive and personalized environment.',
+}
 
 export default function RootLayout({
   children,
@@ -29,11 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='dark'>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-gradient-to-br from-primary-950 to-bg-primary to-34% `}>
-        <Header />
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body>
         {children}
       </body>
     </html>
-  );
+  )
 }
