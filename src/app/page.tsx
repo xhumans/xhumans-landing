@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/HeroSection'
 import FeaturedAvatarsSection from '@/components/sections/FeaturedAvatarsSection'
 import DemoSection from '@/components/sections/DemoSection'
 import ValuePropositionSection from '@/components/sections/ValuePropositionSection'
+import AskTheExpertsSection from '@/components/sections/AskTheExpertsSection'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <DemoSection />
       <FeaturedAvatarsSection />
       <ValuePropositionSection />
+      <AskTheExpertsSection />
       {/* Other sections will be added later */}
       <Footer />
     </main>
