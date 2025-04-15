@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../common/Section';
 
-export default function KeyFeaturesSection() {
+export default function HighlightsSection() {
   // Define background element with gradient curves
   const sectionBackground = (
     <div className="absolute inset-0 overflow-hidden">
@@ -71,7 +71,7 @@ export default function KeyFeaturesSection() {
     <Section
       background={sectionBackground}
       className="py-24 md:py-32"
-      id="key-features"
+      id="highlights"
     >
       <div className="grid grid-cols-1 gap-6 md:gap-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1024px] mx-auto gap-6 md:gap-8">
