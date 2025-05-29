@@ -27,9 +27,9 @@ export default function DemoSection() {
     <Section background={demoBackground}>
       {/* Section heading */}
       <div className="text-center mb-12">
-        <h2 className="display-s md:display-m mb-4">Experience a New Era of Knowledge Sharing</h2>
-        <p className="body-l text-text-secondary max-w-2xl mx-auto mb-8">
-          Talk to digital versions of real-life experts, celebrities, and creatives in a conversational way that feels real, informative, and truly interactive.
+        <h2 className="display-s md:display-m mb-4">Experience AI-Powered Business Mentorship</h2>
+        <p className="body-l text-text-secondary max-w-3xl mx-auto mb-8 ">
+          See how our platform works by talking to a digital business mentor.
         </p>
       </div>
       

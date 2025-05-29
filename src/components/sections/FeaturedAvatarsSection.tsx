@@ -7,24 +7,24 @@ export default function FeaturedAvatarsSection() {
   // Sample data for avatar cards
   const avatars = [
     {
-      name: "Entrepreneur",
-      role: "Business Leader",
+      name: "Tech Entrepreneur",
+      role: "Startup Founder",
       imageSrc: "/images/avatars/entrepreneur.jpg",
-      tags: ["Business", "Leadership", "Tech"],
+      tags: ["SaaS", "Scaling", "Fundraising"],
       available: false
     },
     {
-      name: "Scientist",
-      role: "Physics Expert",
+      name: "E-commerce Executive",
+      role: "Retail Leader",
       imageSrc: "/images/avatars/artist.jpg",
-      tags: ["Physics", "Quantum Mechanics", "Research"],
+      tags: ["E-commerce", "Marketing", "Operations"],
       available: false
     },
     {
-      name: "Athlete",
-      role: "Professional Player",
+      name: "Investment Professional",
+      role: "Venture Partner",
       imageSrc: "/images/avatars/athlete.png", 
-      tags: ["Sports", "Training", "Nutrition"],
+      tags: ["Investing", "Finance", "Strategy"],
       available: false
     },
     // You can add more avatars as needed
@@ -47,9 +47,9 @@ export default function FeaturedAvatarsSection() {
     >
       {/* Section heading */}
       <div className="text-center mb-16">
-        <h2 className="display-m mb-4">Coming to You Soon</h2>
-        <p className="body-l text-text-secondary max-w-2xl mx-auto">
-          Early access to our growing library of digital humans across various domains of expertise
+        <h2 className="display-m mb-4">Meet Your Business Mentors</h2>
+        <p className="body-l text-text-secondary max-w-3xl mx-auto">
+          Connect with successful entrepreneurs and business leaders from Mexico
         </p>
       </div>
       
@@ -70,7 +70,7 @@ export default function FeaturedAvatarsSection() {
       {/* View All button */}
       <div className="flex justify-center mt-12">
         <button className="btn btn-outline btn-md">
-          View All Avatars
+          View All Mentors
         </button>
       </div>
     </Section>

@@ -30,8 +30,8 @@ export default function HeroSection() {
             XTRAORDINARY HUMANS
           </h1>
           
-          <p className="body-l text-text-secondary max-w-2xl mx-auto mb-8">
-            Engage in powerful digital conversations with high-fidelity representations of your favorite personalities, all in an interactive and personalized environment.
+          <p className="body-l text-text-secondary max-w-3xl mx-auto mb-8">
+            Access the wisdom of successful business leaders through AI-powered conversations.
           </p>
           
           <Button variant="primary" size="lg">
