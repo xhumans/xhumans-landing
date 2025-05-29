@@ -2,49 +2,37 @@ import React from 'react';
 import Section from '../common/Section';
 
 export default function HighlightsSection() {
-  // Define background element with gradient curves
   const sectionBackground = (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Main background color */}
       <div className="absolute inset-0 bg-bg-black"></div>
       
-      {/* Blue gradient curve */}
       <div className="absolute left-0 top-0 w-full h-full">
-        <svg viewBox="0 0 1200 800" className="w-full h-full" preserveAspectRatio="none">
-          <path 
-            d="M-100,800 C200,600 900,700 1300,300 L1300,0 L-100,0 Z" 
-            fill="none"
-            stroke="url(#blueGradient)"
-            strokeWidth="3"
-            opacity="0.6"
-          />
+        <svg viewBox="24 0 2100 748" className="w-full h-full" preserveAspectRatio="none">
           <defs>
-            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3B82F6" />
-              <stop offset="50%" stopColor="#06B6D4" />
-              <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.5" />
+            <linearGradient 
+              id="gradient-curve" 
+              x1="191.54" 
+              y1="409.85" 
+              x2="2017.54" 
+              y2="454.35" 
+              gradientTransform="translate(0 805.45) scale(1 -1)" 
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" className="gradient-stop-1"/>
+              <stop offset="0.17" className="gradient-stop-2"/>
+              <stop offset="0.47" className="gradient-stop-3"/>
+              <stop offset="0.63" className="gradient-stop-4"/>
+              <stop offset="0.81" className="gradient-stop-5"/>
+              <stop offset="1" className="gradient-stop-6"/>
             </linearGradient>
           </defs>
-        </svg>
-      </div>
-      
-      {/* Pink gradient curve */}
-      <div className="absolute right-0 bottom-0 w-full h-full">
-        <svg viewBox="0 0 1200 800" className="w-full h-full" preserveAspectRatio="none">
           <path 
-            d="M1300,0 C1000,300 400,100 -100,500 L-100,800 L1300,800 Z" 
+            d="M5.16,746.23c51.67-140.83,226.1-402.1,510.5-320.5,355.5,102,672.72,336.76,1117,221.5C1977.66,557.73,2158.16,173.23,2135.16.73"
             fill="none"
-            stroke="url(#pinkGradient)"
-            strokeWidth="3"
-            opacity="0.6"
+            stroke="url(#gradient-curve)"
+            strokeWidth="11"
+            className="opacity-60"
           />
-          <defs>
-            <linearGradient id="pinkGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#EC4899" />
-              <stop offset="50%" stopColor="#F59E0B" />
-              <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
         </svg>
       </div>
     </div>
@@ -89,7 +77,7 @@ export default function HighlightsSection() {
                 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full justify-end">
-                  <h3 className="h3 font-display mb-3 text-white font-display">{features[0].title}</h3>
+                  <h3 className="h3 font-display mb-3 text-white">{features[0].title}</h3>
                   <p className="text-white/80">{features[0].description}</p>
                 </div>
               </div>
@@ -113,7 +101,7 @@ export default function HighlightsSection() {
             <div className="rounded-3xl overflow-hidden h-full max-w-[500px] mx-auto w-full border border-secondary-500/20">
               <div className="h-full bg-black/40 backdrop-blur-md p-8 relative">
                 <div className="relative z-10 flex flex-col h-full justify-end">
-                  <h3 className="h3 font-display mb-3 text-white font-display">{features[2].title}</h3>
+                  <h3 className="h3 font-display mb-3 text-white">{features[2].title}</h3>
                   <p className="text-white/80">{features[2].description}</p>
                 </div>
               </div>
