@@ -31,7 +31,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="body-l text-text-secondary max-w-2xl mx-auto mb-8">
-            Access the wisdom of successful business leaders through AI-powered conversations. Get authentic mentorship and insights from entrepreneurs who've built extraordinary companies.
+            Access the wisdom of successful business leaders through AI-powered conversations.
           </p>
           
           <Button variant="primary" size="lg">
