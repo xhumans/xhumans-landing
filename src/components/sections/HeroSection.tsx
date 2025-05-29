@@ -31,7 +31,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="body-l text-text-secondary max-w-2xl mx-auto mb-8">
-            Engage in powerful digital conversations with high-fidelity representations of your favorite personalities, all in an interactive and personalized environment.
+            Access the wisdom of successful business leaders through AI-powered conversations. Get authentic mentorship and insights from entrepreneurs who've built extraordinary companies.
           </p>
           
           <Button variant="primary" size="lg">

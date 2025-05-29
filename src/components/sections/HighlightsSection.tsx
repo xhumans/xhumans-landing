@@ -41,17 +41,17 @@ export default function HighlightsSection() {
   // Feature content
   const features = [
     {
-      title: "Instant Access to Knowledge",
-      description: "Tap into valuable advice and insights from world leaders, anytime you need guidance.",
+      title: "Accessible Business Mentorship",
+      description: "Break down traditional barriers to mentorship. Connect with successful entrepreneurs regardless of your location, network, or status.",
       isMain: true
     },
     {
-      title: "Authentic Conversations",
-      description: "Talk directly with lifelike digital versions of iconic personalities, offering you an experience that feels real and personal."
+      title: "Authentic Leadership Wisdom",
+      description: "Every interaction reflects the real knowledge, experiences, and business philosophy of proven leaders who've built successful companies."
     },
     {
-      title: "Expert-Approved Insights",
-      description: "All information comes from the experts themselves, ensuring that every response is grounded in their unique knowledge and experiences."
+      title: "Actionable Business Guidance",
+      description: "Focus on practical insights you can apply immediately to your business challenges and professional development."
     }
   ];
 

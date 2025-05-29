@@ -16,14 +16,14 @@ export default function AskTheExpertsSection() {
 
   // Questions to display around the devices
   const questions = [
-    { text: "What's your daily routine?", position: "top-[0%] left-[0%] md:left-[30%]", delay: 300 },
-    { text: "How do you build a successful brand?", position: "top-[20%] left-[5%] md:left-[5%]", delay: 0 },
-    { text: "How do you break into your industry?", position: "top-[25%] right-[0%] md:right-[2%]", delay: 600 },
-    { text: "What's the key to staying creative?", position: "top-[45%] left-[10%] md:left-[0%]", delay: 200 },
-    { text: "Who influenced you the most?", position: "top-[50%] right-[10%] md:right-[0%]", delay: 800 },
-    { text: "How do you handle failure?", position: "bottom-[25%] left-[0%] md:left-[10%]", delay: 400 },
-    { text: "What habits lead to long-term success?", position: "bottom-[20%] right-[5%] md:right-[0%]", delay: 700 },
-    { text: "What's your process for mastering a skill?", position: "bottom-[0%] right-[0%] md:right-[20%]", delay: 500 },
+    { text: "How did you validate your business idea?", position: "top-[0%] left-[0%] md:left-[30%]", delay: 300 },
+    { text: "What's your approach to fundraising?", position: "top-[20%] left-[5%] md:left-[5%]", delay: 0 },
+    { text: "How do you scale a team effectively?", position: "top-[25%] right-[0%] md:right-[2%]", delay: 600 },
+    { text: "What's your strategy for market expansion?", position: "top-[45%] left-[10%] md:left-[0%]", delay: 200 },
+    { text: "How do you handle business setbacks?", position: "top-[50%] right-[10%] md:right-[0%]", delay: 800 },
+    { text: "What metrics matter most for growth?", position: "bottom-[25%] left-[0%] md:left-[10%]", delay: 400 },
+    { text: "How do you build strategic partnerships?", position: "bottom-[20%] right-[5%] md:right-[0%]", delay: 700 },
+    { text: "What's your leadership philosophy?", position: "bottom-[0%] right-[0%] md:right-[20%]", delay: 500 },
   ];
 
   return (
@@ -34,10 +34,10 @@ export default function AskTheExpertsSection() {
     >
       {/* Section heading */}
       <div className="text-center mb-16">
-        <h2 className="display-s md:display-m mb-6">Ask the Experts</h2>
+        <h2 className="display-s md:display-m mb-6">Ask Business Leaders Anything</h2>
         <p className="body-l text-text-secondary max-w-2xl mx-auto">
-          Connect with digital versions of your favorite experts and ask them anything.
-          Get personalized insights and learn directly from extraordinary minds.
+          Get answers to your toughest business questions from successful entrepreneurs.
+          Access practical insights and proven strategies from leaders who've built thriving companies.
         </p>
       </div>
       
