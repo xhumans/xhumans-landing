@@ -74,7 +74,7 @@ export default function Footer() {
           <div>
             <h5 className="h5 text-white mb-4">Platform</h5>
             <ul className="space-y-3">
-              <li><Link href="#features" className="text-text-secondary hover:text-text-primary transition-colors">Features</Link></li>
+              <li><Link href="#highlights" className="text-text-secondary hover:text-text-primary transition-colors">Highlights</Link></li>
               <li><Link href="#roadmap" className="text-text-secondary hover:text-text-primary transition-colors">Roadmap</Link></li>
               <li><Link href="#pricing" className="text-text-secondary hover:text-text-primary transition-colors">Pricing</Link></li>
               <li><Link href="#demo" className="text-text-secondary hover:text-text-primary transition-colors">Demo</Link></li>

@@ -6,7 +6,7 @@ import FeaturedAvatarsSection from '@/components/sections/FeaturedAvatarsSection
 import DemoSection from '@/components/sections/DemoSection'
 import ValuePropositionSection from '@/components/sections/ValuePropositionSection'
 import AskTheExpertsSection from '@/components/sections/AskTheExpertsSection'
-import KeyFeaturesSection from '@/components/sections/KeyFeaturesSection'
+import HighlightsSection from '@/components/sections/HighlightsSection'
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <FeaturedAvatarsSection />
       <ValuePropositionSection />
       <AskTheExpertsSection />
-      <KeyFeaturesSection />
+      <HighlightsSection />
       {/* Other sections will be added later */}
       <Footer />
     </main>

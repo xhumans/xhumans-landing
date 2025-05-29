@@ -56,6 +56,14 @@
   --color-bg-tertiary: oklch(0.22 0.0157 279.43);
   --color-bg-quaternary: oklch(0.25 0.0132 278.99);
   --color-bg-fivefold: oklch(0.29 0.0109 278.19);
+
+  /* Gradient Curve Colors */
+  --gradient-1: oklch(0.61 0.2148 257.3); /* Blue (#087cff equivalent) */
+  --gradient-2: oklch(0.77 0.130468 197.2918); /* Cyan (#00ccd0 equivalent) */
+  --gradient-3: oklch(0.72 0.2291 340.54); /* Pink (#fc5bcf equivalent) */
+  --gradient-4: oklch(0.6 0.2045 309.97); /* Purple (#a653da equivalent) */
+  --gradient-5: oklch(0.91 0.0491 91.77); /* Light beige (#ede1bd equivalent) */
+  --gradient-6: oklch(0.81 0.1051 21.79);  /* Coral (#fca4a1 equivalent) */
 }
 
 html, body {
@@ -234,6 +242,23 @@ html, body {
   .btn-sm {
     @apply h-9 px-3 text-sm; /* 36px height, appropriate padding */
   }
+}
+
+/* Add Tailwind gradient utility */
+@layer utilities {
+  .gradient-curve {
+    --tw-gradient-stops: var(--gradient-1), var(--gradient-2) 17%, var(--gradient-3) 47%, var(--gradient-4) 63%, var(--gradient-5) 81%, var(--gradient-6);
+  }
+}
+
+/* SVG gradient stops */
+@layer utilities {
+  .gradient-stop-1 { stop-color: var(--gradient-1); }
+  .gradient-stop-2 { stop-color: var(--gradient-2); }
+  .gradient-stop-3 { stop-color: var(--gradient-3); }
+  .gradient-stop-4 { stop-color: var(--gradient-4); }
+  .gradient-stop-5 { stop-color: var(--gradient-5); }
+  .gradient-stop-6 { stop-color: var(--gradient-6); }
 }
 
 /* Animation keyframes */
