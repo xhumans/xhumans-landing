@@ -48,8 +48,8 @@ export default function FeaturedAvatarsSection() {
       {/* Section heading */}
       <div className="text-center mb-16">
         <h2 className="display-m mb-4">Meet Your Business Mentors</h2>
-        <p className="body-l text-text-secondary max-w-2xl mx-auto">
-          Connect with successful entrepreneurs and business leaders from Mexico City and across Latin America
+        <p className="body-l text-text-secondary max-w-3xl mx-auto">
+          Connect with successful entrepreneurs and business leaders from Mexico
         </p>
       </div>
       

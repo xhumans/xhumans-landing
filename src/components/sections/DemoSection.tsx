@@ -28,8 +28,8 @@ export default function DemoSection() {
       {/* Section heading */}
       <div className="text-center mb-12">
         <h2 className="display-s md:display-m mb-4">Experience AI-Powered Business Mentorship</h2>
-        <p className="body-l text-text-secondary max-w-2xl mx-auto mb-8">
-          See how our platform works by talking to a digital business mentor. Get personalized advice, ask strategic questions, and experience the future of entrepreneurial learning.
+        <p className="body-l text-text-secondary max-w-3xl mx-auto mb-8 ">
+          See how our platform works by talking to a digital business mentor.
         </p>
       </div>
       

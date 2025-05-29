@@ -72,17 +72,17 @@ export default function ValuePropositionSection() {
     {
       icon: <IconBusinessLeader />,
       title: "Authentic Business Leaders",
-      description: "Connect with AI-powered representations of successful entrepreneurs and executives. Each avatar embodies the real expertise and communication style of proven business leaders."
+      description: "AI-powered avatars based on real entrepreneurs and executives."
     },
     {
       icon: <IconMentorship />,
       title: "Personalized Mentorship",
-      description: "Get tailored business guidance through natural conversations. Our AI mentors adapt their advice to your specific challenges and entrepreneurial journey."
+      description: "Get tailored guidance from leaders who’ve been there."
     },
     {
       icon: <IconActionable />,
-      title: "Actionable Insights",
-      description: "Receive practical business advice you can implement immediately. Learn from real experiences of leaders who've built successful companies across Latin America."
+      title: "Real Actionable Insights",
+      description: "Learn what works—and what to avoid—straight from the source."
     }
   ];
 
@@ -95,10 +95,10 @@ export default function ValuePropositionSection() {
       {/* Section heading */}
       <div className="text-center mb-16">
         <h2 className="display-s md:display-m mb-6">
-        Access authentic business wisdom through AI-powered conversations with successful entrepreneurs and industry leaders.
+        Access real business wisdom via AI chats with top entrepreneurs and industry leaders.
         </h2>
-        <p className="body-l text-text-secondary max-w-3xl mx-auto">
-        XHumans democratizes access to high-quality business mentorship by creating digital representations of proven leaders. Get personalized guidance, avoid common pitfalls, and accelerate your entrepreneurial journey with insights from those who've walked the path before you.
+        <p className="body-l text-text-secondary max-w-4xl mx-auto">
+        XHumans makes top-tier business mentorship accessible through digital versions of proven leaders, offering personalized guidance to fast-track your entrepreneurial journey.
         </p>
       </div>
       
