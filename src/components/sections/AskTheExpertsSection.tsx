@@ -37,7 +37,7 @@ export default function AskTheExpertsSection() {
         <h2 className="display-s md:display-m mb-6">Ask Business Leaders Anything</h2>
         <p className="body-l text-text-secondary max-w-3xl mx-auto">
           Get answers to your toughest business questions from successful entrepreneurs.
-          Access practical insights and proven strategies from leaders who've built thriving companies.
+          Access practical insights and proven strategies from leaders who have built thriving companies.
         </p>
       </div>
       
