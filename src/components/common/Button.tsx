@@ -10,6 +10,7 @@ type ButtonProps = {
   onClick?: () => void
   className?: string
   type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export default function Button({
@@ -19,7 +20,8 @@ export default function Button({
   href,
   onClick,
   className = '',
-  type = 'button'
+  type = 'button',
+  disabled = false
 }: ButtonProps) {
   // Combine button classes based on variant and size
   const buttonClasses = `btn btn-${variant} btn-${size} ${className}`
@@ -39,6 +41,7 @@ export default function Button({
       type={type} 
       onClick={onClick} 
       className={buttonClasses}
+      disabled={disabled}
     >
       {children}
     </button>

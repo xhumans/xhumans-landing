@@ -34,7 +34,7 @@ export default function HeroSection() {
             Engage in powerful digital conversations with high-fidelity representations of your favorite personalities, all in an interactive and personalized environment.
           </p>
           
-          <Button variant="primary" size="lg">
+          <Button variant="primary" size="lg" href="/explore">
             Experience Now
           </Button>
         </div>

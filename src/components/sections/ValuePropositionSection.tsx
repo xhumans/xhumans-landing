@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from '../common/Section';
+import Button from '../common/Button';
 
 // Icons for the value propositions
 const IconRealistic = () => (
@@ -102,9 +103,9 @@ export default function ValuePropositionSection() {
 
       {/* Optional CTA */}
       <div className="flex justify-center mt-16">
-        <button className="btn btn-primary btn-lg">
+        <Button variant="primary" size="lg" href="/explore">
           Explore the Experience
-        </button>
+        </Button>
       </div>
     </Section>
   );
