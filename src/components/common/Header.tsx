@@ -35,9 +35,6 @@ export default function Header() {
           <Link href="#about" className="text-text-secondary hover:text-text-primary transition-colors">
             About
           </Link>
-          <Link href="#demo" className="text-text-secondary hover:text-text-primary transition-colors">
-            Demo
-          </Link>
           <Link href="#faq" className="text-text-secondary hover:text-text-primary transition-colors">
             FAQ
           </Link>

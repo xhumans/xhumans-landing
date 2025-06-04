@@ -51,12 +51,12 @@ export function ComingSoonSection() {
           </div>
 
           <h2 className="display-s md:display-m text-text-primary mb-4">
-            More Amazing Characters Coming Soon
+            More Amazing XHumans Coming Soon
           </h2>
           
           <p className="body-l text-text-secondary mb-8 max-w-2xl mx-auto">
-            We&apos;re constantly adding new digital humans with diverse expertise and personalities. 
-            Be the first to know when new characters become available.
+            We&apos;re constantly adding new XHumans with diverse expertise and personalities. 
+            Be the first to know when new XHumans become available.
           </p>
 
           {!isSubmitted ? (
@@ -102,7 +102,7 @@ export function ComingSoonSection() {
               </div>
               <h3 className="h4 text-text-primary mb-2">You&apos;re all set!</h3>
               <p className="body-s text-text-secondary">
-                We&apos;ll notify you as soon as new characters are available.
+                We&apos;ll notify you as soon as new XHumans are available.
               </p>
             </div>
           )}
@@ -116,7 +116,7 @@ export function ComingSoonSection() {
                 </svg>
               </div>
               <h4 className="h6 text-text-primary mb-1">Diverse Expertise</h4>
-              <p className="caption-l text-text-tertiary">Characters across industries and specializations</p>
+              <p className="caption-l text-text-tertiary">XHumans across industries and specializations</p>
             </div>
             
             <div className="text-center">
@@ -126,7 +126,7 @@ export function ComingSoonSection() {
                 </svg>
               </div>
               <h4 className="h6 text-text-primary mb-1">Early Access</h4>
-              <p className="caption-l text-text-tertiary">Be among the first to interact with new characters</p>
+              <p className="caption-l text-text-tertiary">Be among the first to interact with new XHumans</p>
             </div>
             
             <div className="text-center">
@@ -136,7 +136,7 @@ export function ComingSoonSection() {
                 </svg>
               </div>
               <h4 className="h6 text-text-primary mb-1">Premium Features</h4>
-              <p className="caption-l text-text-tertiary">Access to exclusive character interactions and content</p>
+              <p className="caption-l text-text-tertiary">Access to exclusive XHuman interactions and content</p>
             </div>
           </div>
         </div>

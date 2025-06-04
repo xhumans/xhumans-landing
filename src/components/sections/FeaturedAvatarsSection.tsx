@@ -26,7 +26,7 @@ export default function FeaturedAvatarsSection() {
       <div className="text-center mb-16">
         <h2 className="display-m mb-4">Coming to You Soon</h2>
         <p className="body-l text-text-secondary max-w-2xl mx-auto">
-          Early access to our growing library of digital humans across various domains of expertise
+          Early access to our growing library of XHumans across various domains of expertise
         </p>
       </div>
       
@@ -47,7 +47,7 @@ export default function FeaturedAvatarsSection() {
       {/* View All button */}
       <div className="flex justify-center mt-12">
         <Button variant="outline" size="md" href="/explore">
-          View All Avatars
+          View All XHumans
         </Button>
       </div>
     </Section>

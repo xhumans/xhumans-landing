@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Button from '@/components/common/Button'
 import { Character } from '@/types/character'
+import { categories } from '@/data/characters'
 
 interface CharacterCardProps {
   character: Character
@@ -63,7 +64,7 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
                 isHovered ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}
             >
-              {character.status === 'available' ? 'Connect Now' : 'Notify Me'}
+              {character.status === 'available' ? `Talk with ${character.name.split(' ')[0]}` : 'Notify Me'}
             </Button>
           </div>
         </div>
@@ -75,7 +76,7 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
           {character.name}
         </h3>
         
-        <p className="body-s text-text-secondary mb-4 line-clamp-2">
+        <p className="body-s text-text-secondary mb-3 line-clamp-2">
           {character.title}
         </p>
         
@@ -83,21 +84,19 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
           {character.description}
         </p>
 
-        {/* Expertise Tags */}
+        {/* Category Tags */}
         <div className="flex flex-wrap gap-2">
-          {character.expertise.slice(0, 3).map((skill) => (
-            <span
-              key={skill}
-              className="px-2 py-1 rounded-md bg-bg-tertiary border border-primary-500/20 text-text-secondary caption-s"
-            >
-              {skill}
-            </span>
-          ))}
-          {character.expertise.length > 3 && (
-            <span className="px-2 py-1 rounded-md bg-bg-tertiary border border-primary-500/20 text-text-secondary caption-s">
-              +{character.expertise.length - 3} more
-            </span>
-          )}
+          {character.categories.map((categoryId) => {
+            const category = categories.find(cat => cat.id === categoryId);
+            return (
+              <span
+                key={categoryId}
+                className="px-2 py-1 rounded-md bg-bg-tertiary border border-primary-500/20 text-text-secondary caption-s"
+              >
+                {category?.displayName || categoryId}
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>

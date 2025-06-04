@@ -28,9 +28,9 @@ export function CharacterGrid({ characters, onCharacterClick }: CharacterGridPro
               />
             </svg>
           </div>
-          <h3 className="h4 text-text-secondary mb-2">No characters found</h3>
+          <h3 className="h4 text-text-secondary mb-2">No XHumans found</h3>
           <p className="body-s text-text-tertiary">
-            Try selecting a different category to see more characters.
+            Try selecting a different category to see more XHumans.
           </p>
         </div>
       </div>

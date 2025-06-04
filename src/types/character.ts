@@ -2,6 +2,8 @@ export interface Character {
   id: string
   name: string
   title: string
+  topic: string
+  quote: string
   expertise: string[]
   categories: string[]
   profileImage: string

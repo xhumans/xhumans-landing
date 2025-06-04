@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Button from '@/components/common/Button'
 import { Character } from '@/types/character'
+import { categories } from '@/data/characters'
 
 interface HeroCarouselProps {
   characters: Character[]
@@ -56,46 +57,49 @@ export function HeroCarousel({ characters, autoPlay = true, interval = 5000 }: H
           <div className="max-w-4xl">
             <div className="mb-4">
               <span className="inline-block px-3 py-1 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-200 caption-l">
-                Featured Expert
+                Featured XHuman
               </span>
             </div>
             
-            <h1 className="display-m md:display-l text-text-primary mb-2">
+            <h1 className="display-m md:display-l text-text-primary mb-4">
               {currentCharacter.name}
             </h1>
             
-            <p className="h4 text-text-secondary mb-4">
-              {currentCharacter.title}
+            <p className="h4 text-primary-300 font-medium mb-6 max-w-2xl">
+              {currentCharacter.topic}
             </p>
             
-            <p className="body-l text-text-tertiary mb-6 max-w-2xl">
-              {currentCharacter.description}
-            </p>
+            <blockquote className="body-l text-text-secondary italic mb-8 max-w-2xl">
+              "{currentCharacter.quote}"
+            </blockquote>
 
-            {/* Expertise Tags */}
+            {/* Category Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {currentCharacter.expertise.slice(0, 3).map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1 rounded-full bg-bg-tertiary border border-primary-500/20 text-text-secondary caption-l"
-                >
-                  {skill}
-                </span>
-              ))}
+              {currentCharacter.categories.map((categoryId) => {
+                const category = categories.find(cat => cat.id === categoryId);
+                return (
+                  <span
+                    key={categoryId}
+                    className="px-3 py-1 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-200 caption-l"
+                  >
+                    {category?.displayName || categoryId}
+                  </span>
+                );
+              })}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Button
                 variant="primary"
-                size="lg"
-                className="btn-primary btn-lg"
+                size="md"
+                className="btn-primary btn-md"
               >
-                {currentCharacter.status === 'available' ? 'Connect Now' : 'Coming Soon'}
+                {currentCharacter.status === 'available' ? `Talk with ${currentCharacter.name.split(' ')[0]}` : 'Coming Soon'}
               </Button>
               <Button
                 variant="outline"
-                size="lg"
-                className="btn-outline btn-lg"
+                size="md"
+                className="btn-outline btn-md"
               >
                 Learn More
               </Button>
