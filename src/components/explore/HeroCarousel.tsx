@@ -10,9 +10,10 @@ interface HeroCarouselProps {
   characters: Character[]
   autoPlay?: boolean
   interval?: number
+  onCharacterClick?: (characterId: string) => void
 }
 
-export function HeroCarousel({ characters, autoPlay = true, interval = 5000 }: HeroCarouselProps) {
+export function HeroCarousel({ characters, autoPlay = true, interval = 5000, onCharacterClick }: HeroCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -70,7 +71,7 @@ export function HeroCarousel({ characters, autoPlay = true, interval = 5000 }: H
             </p>
             
             <blockquote className="body-l text-text-secondary italic mb-8 max-w-2xl">
-              "{currentCharacter.quote}"
+              &ldquo;{currentCharacter.quote}&rdquo;
             </blockquote>
 
             {/* Category Tags */}
@@ -93,6 +94,7 @@ export function HeroCarousel({ characters, autoPlay = true, interval = 5000 }: H
                 variant="primary"
                 size="md"
                 className="btn-primary btn-md"
+                onClick={() => onCharacterClick?.(currentCharacter.id)}
               >
                 {currentCharacter.status === 'available' ? `Talk with ${currentCharacter.name.split(' ')[0]}` : 'Coming Soon'}
               </Button>
@@ -100,6 +102,7 @@ export function HeroCarousel({ characters, autoPlay = true, interval = 5000 }: H
                 variant="outline"
                 size="md"
                 className="btn-outline btn-md"
+                onClick={() => onCharacterClick?.(currentCharacter.id)}
               >
                 Learn More
               </Button>

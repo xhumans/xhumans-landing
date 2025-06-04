@@ -15,9 +15,7 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    if (onClick) {
-      onClick(character.id)
-    }
+    onClick?.(character.id)
   }
 
   return (
@@ -63,6 +61,10 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
               className={`w-full btn-primary btn-md transition-all duration-300 transform ${
                 isHovered ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}
+              onClick={(e) => {
+                e?.stopPropagation()
+                onClick?.(character.id)
+              }}
             >
               {character.status === 'available' ? `Talk with ${character.name.split(' ')[0]}` : 'Notify Me'}
             </Button>

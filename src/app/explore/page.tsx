@@ -8,10 +8,13 @@ import { HeroCarousel } from '@/components/explore/HeroCarousel'
 import { CategoryFilter } from '@/components/explore/CategoryFilter'
 import { CharacterGrid } from '@/components/explore/CharacterGrid'
 import { ComingSoonSection } from '@/components/explore/ComingSoonSection'
-import { categories, getFeaturedCharacters, filterCharactersByCategory } from '@/data/characters'
+import { XHumanModal } from '@/components/explore/XHumanModal'
+import { categories, getFeaturedCharacters, filterCharactersByCategory, characters } from '@/data/characters'
+import { Character } from '@/types/character'
 
 export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState('all')
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
   
   const filteredCharacters = useMemo(() => 
     filterCharactersByCategory(activeCategory), 
@@ -20,12 +23,26 @@ export default function ExplorePage() {
 
   const featuredCharacters = useMemo(() => getFeaturedCharacters(), [])
 
+  const handleCharacterClick = (characterId: string) => {
+    const character = characters.find(char => char.id === characterId)
+    if (character) {
+      setSelectedCharacter(character)
+    }
+  }
+
+  const handleCloseModal = () => {
+    setSelectedCharacter(null)
+  }
+
   return (
     <main className="min-h-screen bg-bg-primary text-text-primary">
       <Header />
       
       <Section className="pt-24 pb-16">
-        <HeroCarousel characters={featuredCharacters} />
+        <HeroCarousel 
+          characters={featuredCharacters} 
+          onCharacterClick={handleCharacterClick}
+        />
       </Section>
       
       <Section className="py-16">
@@ -45,7 +62,10 @@ export default function ExplorePage() {
             onCategoryChange={setActiveCategory}
           />
           
-          <CharacterGrid characters={filteredCharacters} />
+          <CharacterGrid 
+            characters={filteredCharacters}
+            onCharacterClick={handleCharacterClick}
+          />
         </div>
       </Section>
       
@@ -54,6 +74,15 @@ export default function ExplorePage() {
       </Section>
       
       <Footer />
+
+      {/* XHuman Modal */}
+      {selectedCharacter && (
+        <XHumanModal
+          character={selectedCharacter}
+          isOpen={!!selectedCharacter}
+          onClose={handleCloseModal}
+        />
+      )}
     </main>
   )
 }
