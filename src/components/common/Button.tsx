@@ -7,9 +7,10 @@ type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   href?: string
-  onClick?: () => void
+  onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void
   className?: string
   type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export default function Button({
@@ -19,7 +20,8 @@ export default function Button({
   href,
   onClick,
   className = '',
-  type = 'button'
+  type = 'button',
+  disabled = false
 }: ButtonProps) {
   // Combine button classes based on variant and size
   const buttonClasses = `btn btn-${variant} btn-${size} ${className}`
@@ -34,12 +36,18 @@ export default function Button({
   }
   
   // Otherwise render as button
+  const buttonProps: React.ButtonHTMLAttributes<HTMLButtonElement> = {
+    type,
+    className: buttonClasses,
+    disabled,
+  }
+  
+  if (onClick) {
+    buttonProps.onClick = (e) => onClick(e)
+  }
+
   return (
-    <button 
-      type={type} 
-      onClick={onClick} 
-      className={buttonClasses}
-    >
+    <button {...buttonProps}>
       {children}
     </button>
   )

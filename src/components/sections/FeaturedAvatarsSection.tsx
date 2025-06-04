@@ -2,33 +2,10 @@
 import React from 'react'
 import AvatarCard from '../common/AvatarCard'
 import Section from '../common/Section'
+import Button from '../common/Button'
+import { avatars } from '@/data/characters'
 
 export default function FeaturedAvatarsSection() {
-  // Sample data for avatar cards
-  const avatars = [
-    {
-      name: "Entrepreneur",
-      role: "Business Leader",
-      imageSrc: "/images/avatars/entrepreneur.jpg",
-      tags: ["Business", "Leadership", "Tech"],
-      available: false
-    },
-    {
-      name: "Scientist",
-      role: "Physics Expert",
-      imageSrc: "/images/avatars/artist.jpg",
-      tags: ["Physics", "Quantum Mechanics", "Research"],
-      available: false
-    },
-    {
-      name: "Athlete",
-      role: "Professional Player",
-      imageSrc: "/images/avatars/athlete.png", 
-      tags: ["Sports", "Training", "Nutrition"],
-      available: false
-    },
-    // You can add more avatars as needed
-  ]
 
   // Define background element
   const avatarsBackground = (
@@ -49,7 +26,7 @@ export default function FeaturedAvatarsSection() {
       <div className="text-center mb-16">
         <h2 className="display-m mb-4">Coming to You Soon</h2>
         <p className="body-l text-text-secondary max-w-2xl mx-auto">
-          Early access to our growing library of digital humans across various domains of expertise
+          Early access to our growing library of XHumans across various domains of expertise
         </p>
       </div>
       
@@ -69,9 +46,9 @@ export default function FeaturedAvatarsSection() {
 
       {/* View All button */}
       <div className="flex justify-center mt-12">
-        <button className="btn btn-outline btn-md">
-          View All Avatars
-        </button>
+        <Button variant="outline" size="md" href="/explore">
+          View All XHumans
+        </Button>
       </div>
     </Section>
   )

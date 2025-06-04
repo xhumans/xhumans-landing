@@ -26,14 +26,14 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
+          <Link href="/explore" className="text-text-secondary hover:text-text-primary transition-colors">
+            Explore
+          </Link>
           <Link href="#features" className="text-text-secondary hover:text-text-primary transition-colors">
             Features
           </Link>
           <Link href="#about" className="text-text-secondary hover:text-text-primary transition-colors">
             About
-          </Link>
-          <Link href="#demo" className="text-text-secondary hover:text-text-primary transition-colors">
-            Demo
           </Link>
           <Link href="#faq" className="text-text-secondary hover:text-text-primary transition-colors">
             FAQ
