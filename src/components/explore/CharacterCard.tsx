@@ -31,7 +31,7 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
           src={character.profileImage}
           alt={character.name}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`object-cover transition-transform duration-500 group-hover:scale-105 ${character.isBlurred ? 'image-blurred' : ''}`}
         />
         
         {/* Coming Soon Badge */}

@@ -40,6 +40,7 @@ export default function FeaturedAvatarsSection() {
             imageSrc={avatar.imageSrc}
             tags={avatar.tags}
             available={avatar.available}
+            isBlurred={true}
           />
         ))}
       </div>
