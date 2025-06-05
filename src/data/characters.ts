@@ -2,56 +2,60 @@ import { Character, Category, Avatar } from '@/types/character'
 
 export const characters: Character[] = [
   {
-    id: 'paty-cantu',
-    name: 'Paty Cantú',
+    id: 'singer',
+    name: 'Singer',
     title: 'Singer-Songwriter & Pop Culture Innovator',
     expertise: ['Music Production', 'Songwriting', 'Live Performance'],
     categories: ['music', 'creative-arts'],
     profileImage: '/images/avatars/paty-cantu.jpeg',
-    description: 'Cantante pop mexicana, ganadora de premios y defensora de las mujeres en la música.',
-    topic: 'Escribir desde el alma: Como convertir vulnerabilidad en fuerza creativa.',
-    quote: 'La música es mi manera de contar historias que todavía no he vivido.',
+    description: 'Mexican pop singer, award winner and advocate for women in music.',
+    topic: 'Writing from the soul: How to turn vulnerability into creative strength.',
+    quote: 'Music is my way of telling stories I haven\'t lived yet.',
     status: 'coming-soon',
-    featured: true
+    featured: true,
+    isBlurred: true
   },
   {
-    id: 'tenoch-huerta',
-    name: 'Tenoch Huerta',
+    id: 'actor',
+    name: 'Actor',
     title: 'Actor & Social Justice Advocate',
     expertise: ['Film Acting', 'Television Acting', 'Anti-Racism Activism'],
     categories: ['film', 'television', 'social-impact'],
     profileImage: '/images/avatars/tenoch-huerta.jpeg',
-    description: 'Actor mexicano de proyección internacional y activista contra el racismo.',
-    topic: 'El camino del héroe: cómo trascender sin olvidar de dónde vienes',
-    quote: 'La verdadera victoria no es llegar, es llegar siendo tú mismo.',
+    description: 'Mexican actor with international projection and anti-racism activist.',
+    topic: 'The hero\'s journey: how to transcend without forgetting where you come from',
+    quote: 'The true victory is not arriving, it\'s arriving being yourself.',
     status: 'available',
-    featured: true
+    featured: true,
+    isBlurred: true
   },
   {
-    id: 'roberto-gomez-bolanos',
-    name: 'Roberto Gómez Bolaños',
+    id: 'comedian',
+    name: 'Comedian',
     title: 'Legendary Comedian, Writer & TV Producer',
     expertise: ['Comedy Writing', 'Television Production', 'Physical Comedy'],
     categories: ['television', 'comedy', 'latinamerican-culture'],
     profileImage: '/images/avatars/roberto-gomez-bolanos.jpeg',
-    description: 'Creador de El Chavo y El Chapulín, ícono del humor latinoamericano.',
-    topic: 'Crear con el corazón: cómo cambiar generaciones con una buena idea.',
-    quote: 'No hace falta ser grande para hacer cosas grandes.',
+    description: 'Creator of iconic comedy shows, icon of Latin American humor.',
+    topic: 'Creating with heart: how to change generations with a good idea.',
+    quote: 'You don\'t need to be big to do big things.',
     status: 'coming-soon',
-    featured: true
+    featured: true,
+    isBlurred: true
   },
   {
-    id: 'el-indio-fernandez',
-    name: 'Emilio "El Indio" Fernández',
+    id: 'director',
+    name: 'Director',
     title: 'Iconic Film Director & Actor',
     expertise: ['Film Direction', 'Visual Storytelling', 'Golden Age Cinema'],
     categories: ['film', 'mexican-cinema'],
     profileImage: '/images/avatars/el-indio.jpeg',
-    description: 'Director emblemático de la Época de Oro del cine mexicano.',
+    description: 'Emblematic director of the Golden Age of Mexican cinema.',
     topic: 'Cinematic Mexico: Crafting National Identity on Screen',
-    quote: 'El cine debe reflejar el alma de su pueblo.',
+    quote: 'Cinema must reflect the soul of its people.',
     status: 'coming-soon',
-    featured: false
+    featured: false,
+    isBlurred: true
   },
   {
     id: 'hans',
@@ -153,7 +157,8 @@ export const charactersToAvatars = (chars: Character[]): Avatar[] => {
     role: char.title.split(' & ')[0], // Use first part of title
     imageSrc: char.profileImage,
     tags: char.expertise.slice(0, 3), // Limit to 3 tags
-    available: char.status === 'available'
+    available: char.status === 'available',
+    isBlurred: char.isBlurred
   }))
 }
 

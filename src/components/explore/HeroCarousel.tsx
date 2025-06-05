@@ -44,7 +44,7 @@ export function HeroCarousel({ characters, autoPlay = true, interval = 5000, onC
           src={currentCharacter.profileImage}
           alt={currentCharacter.name}
           fill
-          className="object-cover"
+          className={`object-cover ${currentCharacter.isBlurred ? 'image-blurred' : ''}`}
           priority
         />
         {/* Gradient Overlays */}

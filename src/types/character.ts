@@ -10,6 +10,7 @@ export interface Character {
   description: string
   status: 'available' | 'coming-soon' | 'beta'
   featured?: boolean
+  isBlurred?: boolean
 }
 
 export interface Category {
@@ -38,4 +39,5 @@ export interface Avatar {
   imageSrc: string
   tags: string[]
   available?: boolean
+  isBlurred?: boolean
 }

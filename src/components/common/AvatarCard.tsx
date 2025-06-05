@@ -9,9 +9,10 @@ type AvatarCardProps = {
   imageSrc: string
   tags: string[]
   available?: boolean
+  isBlurred?: boolean
 }
 
-export default function AvatarCard({ name, role, imageSrc, tags, available = false }: AvatarCardProps) {
+export default function AvatarCard({ name, role, imageSrc, tags, available = false, isBlurred = false }: AvatarCardProps) {
   return (
     <div className="bg-bg-secondary rounded-xl overflow-hidden border border-gray-800 hover:border-primary-500 transition-all group">
       {/* Image container with gradient overlay */}
@@ -20,8 +21,8 @@ export default function AvatarCard({ name, role, imageSrc, tags, available = fal
           src={imageSrc} 
           alt={`${name} - ${role}`} 
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-    />
+          className={`object-cover transition-transform duration-500 group-hover:scale-105 ${isBlurred ? 'image-blurred' : ''}`}
+        />
         <div className="absolute inset-0 bg-linear-to-t from-bg-black via-transparent to-transparent"></div>
       </div>
       

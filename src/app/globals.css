@@ -344,3 +344,8 @@ html, body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Blur effect for public personas */
+.image-blurred {
+  filter: blur(8px);
+}
