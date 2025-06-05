@@ -347,5 +347,5 @@ html, body {
 
 /* Blur effect for public personas */
 .image-blurred {
-  filter: blur(8px);
+  filter: blur(16px);
 }
