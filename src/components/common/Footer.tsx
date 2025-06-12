@@ -20,9 +20,9 @@ export default function Footer() {
               <h2 className="h2 text-white mb-2">Get Early Access</h2>
               <p className="body-m text-text-secondary">Be the first to experience the future of digital human interaction</p>
             </div>
-            <button className="btn btn-primary btn-md mt-4 md:mt-0">
+            <a href="https://app.xhumans.ai" className="btn btn-primary btn-md mt-4 md:mt-0">
               Join Now
-            </button>
+            </a>
           </div>
         </div>
         

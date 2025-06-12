@@ -42,7 +42,7 @@ export default function Header() {
         
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button variant="primary" size="sm">
+          <Button variant="primary" size="sm" href="https://app.xhumans.ai">
             Get Access
           </Button>
         </div>
